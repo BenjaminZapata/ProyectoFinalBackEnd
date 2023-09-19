@@ -1,0 +1,15 @@
+<nav style="display: flex; align-items: center; gap: 1em;">
+  <h1>Bienvenido, {{this.role}} {{this.email}}</h1>
+  <button onclick="logout()">Logout</button>
+  <button onclick="window.location.href='http://localhost:8080/api/carts/1'">Ver carrito</button>
+</nav>
+<section>
+  <img src={{this.profile_photo}} width="120px" height="120px">
+  <br>
+  <a href="/api/users/updateProfilePhoto"><small>Cambiar foto de perfil</small></a>
+  <h2>{{this.email}}</h2>
+  <h3>Mongo ID: {{this._id}}</h3>
+  <h3>{{this.age}} años - Rol: {{this.role}}</h3>
+
+  <a href="/api/products"><button>Volver</button></a>
+</section>
